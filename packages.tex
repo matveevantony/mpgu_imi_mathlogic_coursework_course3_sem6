@@ -1,0 +1,30 @@
+% настройки локализации
+\usepackage[english,russian]{babel}
+
+% настройки шрифтов
+\usepackage[no-math]{fontspec}
+\usepackage{mathptmx}
+\DeclareSymbolFont{Symbols}{OMS}{cmsy}{m}{n}
+\DeclareMathSymbol{\infty}{\mathord}{Symbols}{"31}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} 
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+
+% размеры
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1.5cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\usepackage{tocloft} % оглавление
+\usepackage{natbib} % список литературы
+\usepackage{fancyhdr} % колонтитулы
+\usepackage{titlesec} % заголовки
+\usepackage{indentfirst} % первый абзац
+\usepackage[onehalfspacing]{setspace} % 1,5 интервал
+\usepackage{enumitem} % списки
+\usepackage[bookmarks=true,colorlinks=true,linkcolor=black,citecolor=black]{hyperref} % интерактивные ссылки
+\usepackage{theorem} % нумерация теорем и определений
+
+% продвинутая математика
+\usepackage{amsmath}

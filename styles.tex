@@ -1,0 +1,56 @@
+% колонтитулы
+\fancypagestyle{fancy}
+{
+	\fancyhf{}
+	\cfoot{\thepage}
+}
+
+% размер абзацного отступа
+%\setlength{\parindent}{2em}
+
+% стиль заголовков глав
+\titleformat{\section}
+{\filcenter}
+{\bf\thesection.}
+{5pt}{\normalsize\bfseries}{}
+
+% стиль заголовков подпунктов
+\titleformat{\subsection}
+{\filcenter}
+{\bf\thesubsection.}
+{5pt}{\normalsize\bfseries}{}
+
+% стиль оглавления
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftsecfont}{\normalsize\normalfont}
+\renewcommand{\cftsecpagefont}{\normalsize\normalfont}
+\renewcommand{\cftsecnumwidth}{17pt}
+\renewcommand{\cftbeforesecskip}{0pt}
+\cftsetindents{subsection}{17pt}{17pt}
+\renewcommand{\cftbeforesubsecskip}{0pt}
+\renewcommand{\cftsubsecnumwidth}{25pt}
+\cftsetrmarg{25pt}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand{\cftsecdotsep}{2}
+\renewcommand{\cftsubsecdotsep}{2}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\cftsetpnumwidth{20pt}
+
+% стиль заголовка списка литературы
+\renewcommand{\bibsection}{\section*{\uppercase{Список литературы}}}
+
+% математическое окружение для совокупностей
+\makeatletter
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother

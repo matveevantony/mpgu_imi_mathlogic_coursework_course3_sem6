@@ -1,0 +1,20 @@
+\documentclass[a4paper,14pt]{extarticle} % определение класса документа
+\include{packages} % подключение необходимых пакетов
+\include{styles} % стилевые настройки
+
+\begin{document}
+	\include{title_page} % титульный лист
+	\newpage
+	\renewcommand\contentsname{\normalsize\hfill\bfseries\uppercase{Содержание}\hfill}
+	\tableofcontents % содержание
+	\newpage
+	\include{intro} % введение
+	\newpage
+	\include{section_01} % раздел 1
+	\newpage
+	\include{section_02} % раздел 2
+	\newpage
+	\include{conclusion} % введение
+	\newpage
+	\include{bibliography} % список литературы
+\end{document}
